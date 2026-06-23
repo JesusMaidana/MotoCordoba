@@ -32,7 +32,7 @@ body {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 2rem 1rem;
+  padding: 3rem 1.5rem 6rem 1.5rem;
   overflow: hidden;
   background: var(--asfalto);
 }
@@ -678,5 +678,13 @@ footer p {
     margin-top: 0.25rem;
     border-top: 1px dashed var(--asfalto-soft);
     padding-top: 0.25rem;
+  }
+  
+  .hero {
+    padding: 2rem 1rem 5rem 1rem;
+  }
+  
+  .scroll-hint {
+    bottom: 1rem;
   }
 }
