@@ -11,11 +11,18 @@ const timer = setInterval(() => {
 }, 18);
 
 // Tabs itinerarios
-function switchTab(id) {
+function switchTab(event, id) {
   document.querySelectorAll('.itinerario').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  event.target.classList.add('active');
+  
+  const targetContent = document.getElementById(id);
+  if (targetContent) {
+    targetContent.classList.add('active');
+  }
+  
+  if (event && event.currentTarget) {
+    event.currentTarget.classList.add('active');
+  }
 }
 
 // Checklist
