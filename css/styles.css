@@ -1,0 +1,614 @@
+:root {
+  --asfalto: #111110;
+  --asfalto-mid: #1E1E1C;
+  --asfalto-soft: #2A2A27;
+  --polvo: #C4A882;
+  --polvo-light: #E8E2D9;
+  --verde: #4A7C59;
+  --verde-light: #6FA882;
+  --naranja: #D4641A;
+  --naranja-light: #E8834A;
+  --niebla: #F0EBE3;
+  --texto-claro: #F5F0E8;
+  --texto-muted: #9A9488;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--asfalto);
+  color: var(--texto-claro);
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 2rem;
+  overflow: hidden;
+  background: var(--asfalto);
+}
+
+.hero-road {
+  position: absolute;
+  bottom: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  opacity: 0.18;
+}
+
+.hero-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--naranja);
+  margin-bottom: 1.2rem;
+}
+
+.hero-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(72px, 12vw, 140px);
+  line-height: 0.92;
+  text-align: center;
+  color: var(--polvo-light);
+  letter-spacing: 0.01em;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title span {
+  color: var(--naranja);
+}
+
+.hero-subtitle {
+  font-size: 13px;
+  font-weight: 300;
+  color: var(--texto-muted);
+  text-align: center;
+  margin-top: 1.5rem;
+  letter-spacing: 0.05em;
+  position: relative;
+  z-index: 2;
+}
+
+/* Odómetro */
+.odometro {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 3rem;
+  position: relative;
+  z-index: 2;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.odo-item {
+  text-align: center;
+}
+
+.odo-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 42px;
+  color: var(--naranja);
+  line-height: 1;
+  display: block;
+}
+
+.odo-label {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--texto-muted);
+  margin-top: 4px;
+  display: block;
+}
+
+.odo-sep {
+  width: 1px;
+  background: var(--asfalto-soft);
+  align-self: stretch;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--texto-muted);
+  animation: pulse 2s ease-in-out infinite;
+  z-index: 2;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+
+/* ─── SECCIONES ─── */
+section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.section-label {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--naranja);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 48px;
+  color: var(--polvo-light);
+  line-height: 1;
+  margin-bottom: 2rem;
+  letter-spacing: 0.02em;
+}
+
+/* ─── ALERTA ENERO ─── */
+.alerta-enero {
+  background: var(--asfalto-soft);
+  border-left: 3px solid var(--naranja);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 2.5rem;
+}
+
+.alerta-enero strong {
+  color: var(--naranja);
+  font-weight: 600;
+}
+
+.alerta-enero p {
+  font-size: 13px;
+  color: #B0AA9E;
+  line-height: 1.6;
+  margin-top: 0.4rem;
+}
+
+/* ─── ETAPAS VIAJE CABA → CBA ─── */
+.etapa-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--asfalto-soft);
+  border: 1px solid var(--asfalto-soft);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.etapa-card {
+  background: var(--asfalto-mid);
+  padding: 1.5rem;
+}
+
+.etapa-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 38px;
+  color: var(--asfalto-soft);
+  line-height: 1;
+  float: right;
+  margin-left: 1rem;
+}
+
+.etapa-titulo {
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--polvo-light);
+  margin-bottom: 0.3rem;
+}
+
+.etapa-detalle {
+  font-size: 12px;
+  color: var(--texto-muted);
+  line-height: 1.5;
+}
+
+.etapa-badge {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-top: 0.6rem;
+  font-weight: 500;
+}
+
+.badge-verde { background: rgba(74,124,89,0.2); color: var(--verde-light); }
+.badge-naranja { background: rgba(212,100,26,0.2); color: var(--naranja-light); }
+.badge-polvo { background: rgba(196,168,130,0.2); color: var(--polvo); }
+
+/* ─── ROADMAP / RUTAS ─── */
+.roadmap {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.roadmap::before {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--naranja), var(--verde), var(--polvo));
+  opacity: 0.4;
+}
+
+.ruta-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.ruta-dot {
+  position: absolute;
+  left: -2.5rem;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--asfalto);
+  border: 2px solid var(--naranja);
+  z-index: 1;
+}
+
+.ruta-dot.verde { border-color: var(--verde); }
+.ruta-dot.polvo { border-color: var(--polvo); }
+
+.ruta-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.ruta-nombre {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 26px;
+  color: var(--polvo-light);
+  letter-spacing: 0.02em;
+}
+
+.ruta-km {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: var(--naranja);
+}
+
+.ruta-dificultad {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.dif-baja { background: rgba(74,124,89,0.15); color: var(--verde-light); }
+.dif-media { background: rgba(196,168,130,0.15); color: var(--polvo); }
+.dif-alta { background: rgba(212,100,26,0.15); color: var(--naranja-light); }
+
+.ruta-desc {
+  font-size: 13px;
+  color: #A09890;
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+}
+
+.ruta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  font-size: 11px;
+  color: var(--texto-muted);
+  background: var(--asfalto-soft);
+  padding: 3px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.04em;
+}
+
+.ruta-escena {
+  display: flex;
+  gap: 3px;
+  margin-top: 0.6rem;
+}
+
+.star {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--asfalto-soft);
+}
+.star.on { background: var(--naranja); }
+
+/* ─── TABLA COMPARATIVA ─── */
+.tabla-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid var(--asfalto-soft);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  min-width: 600px;
+}
+
+thead tr {
+  background: var(--asfalto-soft);
+}
+
+th {
+  padding: 10px 14px;
+  text-align: left;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-muted);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+td {
+  padding: 10px 14px;
+  border-top: 1px solid var(--asfalto-soft);
+  color: #C0B8AE;
+  vertical-align: middle;
+}
+
+tr:hover td { background: rgba(255,255,255,0.02); }
+
+td:first-child { color: var(--polvo-light); font-weight: 500; }
+
+.barra-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.barra {
+  height: 4px;
+  background: var(--naranja);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* ─── ITINERARIOS ─── */
+.itinerario-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 2rem;
+}
+
+.tab-btn {
+  background: var(--asfalto-soft);
+  border: none;
+  color: var(--texto-muted);
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn.active {
+  background: var(--naranja);
+  color: var(--asfalto);
+}
+
+.itinerario { display: none; }
+.itinerario.active { display: block; }
+
+.dia {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: var(--asfalto-mid);
+  border-radius: 8px;
+  border: 1px solid var(--asfalto-soft);
+}
+
+.dia-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--asfalto-soft);
+}
+
+.dia-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 32px;
+  color: var(--naranja);
+  line-height: 1;
+  min-width: 44px;
+}
+
+.dia-titulo {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--polvo-light);
+}
+
+.dia-km {
+  margin-left: auto;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px;
+  color: var(--verde-light);
+}
+
+.parada {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  align-items: flex-start;
+  font-size: 13px;
+}
+
+.parada-hora {
+  color: var(--texto-muted);
+  font-size: 11px;
+  min-width: 44px;
+  padding-top: 1px;
+}
+
+.parada-txt { color: #B8B0A5; }
+.parada-txt strong { color: var(--polvo-light); font-weight: 500; }
+
+/* ─── EQUIPO ─── */
+.equipo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.equipo-cat {
+  background: var(--asfalto-mid);
+  border: 1px solid var(--asfalto-soft);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.equipo-cat-titulo {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--naranja);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.equipo-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #A09890;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.equipo-item:last-child { border-bottom: none; }
+
+.chk {
+  width: 14px;
+  height: 14px;
+  border: 1px solid var(--asfalto-soft);
+  border-radius: 3px;
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+.chk.checked {
+  background: var(--verde);
+  border-color: var(--verde);
+}
+
+.chk.checked::after {
+  content: '✓';
+  font-size: 9px;
+  color: white;
+}
+
+/* ─── CLIMA / TIPS ENERO ─── */
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.tip-card {
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--asfalto-soft);
+  background: var(--asfalto-mid);
+}
+
+.tip-icon {
+  font-size: 22px;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.tip-titulo {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--polvo-light);
+  margin-bottom: 0.4rem;
+}
+
+.tip-txt {
+  font-size: 12px;
+  color: var(--texto-muted);
+  line-height: 1.55;
+}
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--asfalto-mid);
+  border-top: 1px solid var(--asfalto-soft);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+footer .big {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 64px;
+  color: var(--asfalto-soft);
+  letter-spacing: 0.05em;
+}
+
+footer p {
+  font-size: 11px;
+  color: var(--texto-muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: -1rem;
+}
+
+/* ─── DIVIDER ─── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--asfalto-soft);
+  margin: 0;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 600px) {
+  .etapa-grid { grid-template-columns: 1fr; }
+  h2 { font-size: 36px; }
+  .hero-title { font-size: 56px; }
+}
