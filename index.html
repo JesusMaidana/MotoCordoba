@@ -1,602 +1,719 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Córdoba en Moto — Enero 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="./css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Córdoba en Moto — Enero 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
 
-<!-- HERO -->
-<div class="hero">
-  <svg class="hero-road" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M600 0 L0 300" stroke="#C4A882" stroke-width="2" stroke-dasharray="20 12"/>
-    <path d="M600 0 L1200 300" stroke="#C4A882" stroke-width="2" stroke-dasharray="20 12"/>
-    <path d="M600 0 L400 300" stroke="#4A7C59" stroke-width="1" stroke-dasharray="10 16" opacity="0.5"/>
-    <path d="M600 0 L800 300" stroke="#4A7C59" stroke-width="1" stroke-dasharray="10 16" opacity="0.5"/>
-  </svg>
+  <!-- HERO -->
+  <div class="hero">
+    <svg class="hero-road" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMax slice" fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M600 0 L0 300" stroke="#C4A882" stroke-width="2" stroke-dasharray="20 12" />
+      <path d="M600 0 L1200 300" stroke="#C4A882" stroke-width="2" stroke-dasharray="20 12" />
+      <path d="M600 0 L400 300" stroke="#4A7C59" stroke-width="1" stroke-dasharray="10 16" opacity="0.5" />
+      <path d="M600 0 L800 300" stroke="#4A7C59" stroke-width="1" stroke-dasharray="10 16" opacity="0.5" />
+    </svg>
 
-  <div class="hero-eyebrow">CABA → Córdoba · 4 jinetes · Enero</div>
-  
-  <div class="hero-title">
-    RUTA<br><span>CÓRDOBA</span><br>2026
+    <div class="hero-eyebrow">CABA → Córdoba · 4 jinetes eliot se la come · Enero</div>
+
+    <div class="hero-title">
+      RUTA<br><span>CÓRDOBA</span><br>2026
+    </div>
+
+    <div class="hero-subtitle">700 km de asfalto · Sierras · Altas Cumbres · 4 motos</div>
+
+    <div class="odometro">
+      <div class="odo-item">
+        <span class="odo-num" id="odo-km">0</span>
+        <span class="odo-label">km totales</span>
+      </div>
+      <div class="odo-sep"></div>
+      <div class="odo-item">
+        <span class="odo-num">3</span>
+        <span class="odo-label">días en ruta</span>
+      </div>
+      <div class="odo-sep"></div>
+      <div class="odo-item">
+        <span class="odo-num">4</span>
+        <span class="odo-label">motociclistas</span>
+      </div>
+      <div class="odo-sep"></div>
+      <div class="odo-item">
+        <span class="odo-num">6</span>
+        <span class="odo-label">rutas serranas</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint">↓ scroll para el plan</div>
   </div>
 
-  <div class="hero-subtitle">700 km de asfalto · Sierras · Altas Cumbres · 4 motos</div>
+  <hr class="divider">
 
-  <div class="odometro">
-    <div class="odo-item">
-      <span class="odo-num" id="odo-km">0</span>
-      <span class="odo-label">km totales</span>
-    </div>
-    <div class="odo-sep"></div>
-    <div class="odo-item">
-      <span class="odo-num">3</span>
-      <span class="odo-label">días en ruta</span>
-    </div>
-    <div class="odo-sep"></div>
-    <div class="odo-item">
-      <span class="odo-num">4</span>
-      <span class="odo-label">motociclistas</span>
-    </div>
-    <div class="odo-sep"></div>
-    <div class="odo-item">
-      <span class="odo-num">6</span>
-      <span class="odo-label">rutas serranas</span>
-    </div>
-  </div>
+  <!-- VIAJE CABA → CBA -->
+  <section>
+    <div class="section-label">Día 0 — partida</div>
+    <h2>De CABA a Córdoba</h2>
 
-  <div class="scroll-hint">↓ scroll para el plan</div>
-</div>
-
-<hr class="divider">
-
-<!-- VIAJE CABA → CBA -->
-<section>
-  <div class="section-label">Día 0 — partida</div>
-  <h2>De CABA a Córdoba</h2>
-  
-  <div class="alerta-enero">
-    <strong>Enero en la Autopista</strong>
-    <p>Salir temprano es clave: el calor entre las 12 y 16 hs en la llanura es agotador. Temperatura esperada: 34–38 °C. Llevar cuello tipo buff, ropa técnica transpirable y 2 L de agua mínimo por persona. Prever tormentas vespertinas desde Rosario hacia el norte.</p>
-  </div>
-
-  <div class="etapa-grid">
-    <div class="etapa-card">
-      <div class="etapa-num">01</div>
-      <div class="etapa-titulo">CABA → Rosario</div>
-      <div class="etapa-detalle">Autopista Ruta 9 / AP01. ~300 km sin historia. Peajes en Zárate, Rosario. Parada en Rosario: desayuno/combustible.</div>
-      <span class="etapa-badge badge-polvo">~3 hs · Autopista</span>
-    </div>
-    <div class="etapa-card">
-      <div class="etapa-num">02</div>
-      <div class="etapa-titulo">Rosario → Villa María</div>
-      <div class="etapa-detalle">Continuar por Ruta 9. ~200 km. Ideal hacer parada larga acá: almuerzo, sombra, hidratación. Evitar la franja 13–16 hs.</div>
-      <span class="etapa-badge badge-naranja">~2 hs · Calor pico</span>
-    </div>
-    <div class="etapa-card">
-      <div class="etapa-num">03</div>
-      <div class="etapa-titulo">Villa María → Carlos Paz</div>
-      <div class="etapa-detalle">200 km. Autopista hasta Córdoba capital, luego desvío a Villa Carlos Paz. Base de operaciones para los días serranos.</div>
-      <span class="etapa-badge badge-verde">~2 hs · Destino base</span>
-    </div>
-    <div class="etapa-card">
-      <div class="etapa-num">🏠</div>
-      <div class="etapa-titulo">Alojamiento: Villa Carlos Paz</div>
-      <div class="etapa-detalle">Amplia oferta: hospedajes, cabañas y campings en todos los rangos. Buena ubicación para salir hacia cualquier ruta serrana al día siguiente.</div>
-      <span class="etapa-badge badge-verde">Punto de partida ideal</span>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- RUTAS SERRANAS -->
-<section>
-  <div class="section-label">El corazón del viaje</div>
-  <h2>Las rutas</h2>
-
-  <div class="roadmap">
-
-    <div class="ruta-item">
-      <div class="ruta-dot"></div>
-      <div class="ruta-header">
-        <span class="ruta-nombre">Altas Cumbres</span>
-        <span class="ruta-km">104 km</span>
-        <span class="ruta-dificultad dif-alta">Alta</span>
-      </div>
-      <p class="ruta-desc">
-        RP34 de Falda del Cañete a Mina Clavero. La más emblemática de Córdoba. Curvas amplias que invitan a disfrutar del manejo, vistas de cóndores y niebla serrana. Sin estaciones de servicio en el tramo: salir con tanque lleno. En enero: temperatura ideal arriba (~22 °C), cuidado con tormentas rápidas.
-      </p>
-      <div class="ruta-tags">
-        <span class="tag">Parador El Águila</span>
-        <span class="tag">PN Quebrada del Condorito</span>
-        <span class="tag">Mina Clavero (alojamiento)</span>
-        <span class="tag">Sin estaciones intermedias</span>
-      </div>
-      <div class="ruta-escena">
-        <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div>
-      </div>
+    <div class="alerta-enero">
+      <strong>Enero en la Autopista</strong>
+      <p>Salir temprano es clave: el calor entre las 12 y 16 hs en la llanura es agotador. Temperatura esperada: 34–38
+        °C. Llevar cuello tipo buff, ropa técnica transpirable y 2 L de agua mínimo por persona. Prever tormentas
+        vespertinas desde Rosario hacia el norte.</p>
     </div>
 
-    <div class="ruta-item">
-      <div class="ruta-dot verde"></div>
-      <div class="ruta-header">
-        <span class="ruta-nombre">Túneles de Taninga</span>
-        <span class="ruta-km">~60 km</span>
-        <span class="ruta-dificultad dif-media">Media</span>
+    <div class="etapa-grid">
+      <div class="etapa-card">
+        <div class="etapa-num">01</div>
+        <div class="etapa-titulo">CABA → Rosario</div>
+        <div class="etapa-detalle">Autopista Ruta 9 / AP01. ~300 km sin historia. Peajes en Zárate, Rosario. Parada en
+          Rosario: desayuno/combustible.</div>
+        <span class="etapa-badge badge-polvo">~3 hs · Autopista</span>
       </div>
-      <p class="ruta-desc">
-        RP28 Taninga → Chancaní. 5 túneles en la Sierra de Pocho, asfaltada en 2019. Paisaje volcánico de palmeras Caranday, sin camiones. Una de las rutas más escénicas y sorprendentes. En el trayecto se cruzan los puentes colgantes históricos. Se puede enlazar con Altas Cumbres para un loop completo.
-      </p>
-      <div class="ruta-tags">
-        <span class="tag">5 túneles serranos</span>
-        <span class="tag">Volcanes de Pocho</span>
-        <span class="tag">Chancaní (Reserva)</span>
-        <span class="tag">Sin tráfico pesado</span>
+      <div class="etapa-card">
+        <div class="etapa-num">02</div>
+        <div class="etapa-titulo">Rosario → Villa María</div>
+        <div class="etapa-detalle">Continuar por Ruta 9. ~200 km. Ideal hacer parada larga acá: almuerzo, sombra,
+          hidratación. Evitar la franja 13–16 hs.</div>
+        <span class="etapa-badge badge-naranja">~2 hs · Calor pico</span>
       </div>
-      <div class="ruta-escena">
-        <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star"></div>
+      <div class="etapa-card">
+        <div class="etapa-num">03</div>
+        <div class="etapa-titulo">Villa María → Carlos Paz</div>
+        <div class="etapa-detalle">200 km. Autopista hasta Córdoba capital, luego desvío a Villa Carlos Paz. Base de
+          operaciones para los días serranos.</div>
+        <span class="etapa-badge badge-verde">~2 hs · Destino base</span>
       </div>
-    </div>
-
-    <div class="ruta-item">
-      <div class="ruta-dot polvo"></div>
-      <div class="ruta-header">
-        <span class="ruta-nombre">Camino del Cuadrado</span>
-        <span class="ruta-km">30 km</span>
-        <span class="ruta-dificultad dif-baja">Baja</span>
-      </div>
-      <p class="ruta-desc">
-        Carlos Paz → Valle Hermoso / La Falda. Asfalto impecable, curvas amplias, prohibido para camiones. Ideal para el primer día cuando todavía se tiene el cuerpo fresco de ruta. Termina con café en el Aeroclub de La Cumbre con vista panorámica.
-      </p>
-      <div class="ruta-tags">
-        <span class="tag">Aeroclub La Cumbre (café)</span>
-        <span class="tag">Sin camiones</span>
-        <span class="tag">Asfalto nuevo</span>
-        <span class="tag">Fines de semana: concurrido</span>
-      </div>
-      <div class="ruta-escena">
-        <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star"></div>
+      <div class="etapa-card">
+        <div class="etapa-num">🏠</div>
+        <div class="etapa-titulo">Alojamiento: Villa Carlos Paz</div>
+        <div class="etapa-detalle">Amplia oferta: hospedajes, cabañas y campings en todos los rangos. Buena ubicación
+          para salir hacia cualquier ruta serrana al día siguiente.</div>
+        <span class="etapa-badge badge-verde">Punto de partida ideal</span>
       </div>
     </div>
+  </section>
 
-    <div class="ruta-item">
-      <div class="ruta-dot"></div>
-      <div class="ruta-header">
-        <span class="ruta-nombre">Ríos y Pinares</span>
-        <span class="ruta-km">80–100 km</span>
-        <span class="ruta-dificultad dif-media">Media</span>
-      </div>
-      <p class="ruta-desc">
-        Falda del Carmen → Los Reartes por el valle Paravachasca. Subida empinada inicial con vistas al Observatorio Bosque Alegre, luego curvas suaves entre ríos y pinos hasta Villa General Belgrano. Asfalto en muy buen estado. Almuerzo obligatorio en el Almacén de Potrerillo.
-      </p>
-      <div class="ruta-tags">
-        <span class="tag">Observatorio Bosque Alegre</span>
-        <span class="tag">Potrero de Garay</span>
-        <span class="tag">Almacén Potrerillo</span>
-        <span class="tag">Río Los Reartes</span>
-      </div>
-      <div class="ruta-escena">
-        <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star"></div>
-      </div>
-    </div>
+  <hr class="divider">
 
-    <div class="ruta-item">
-      <div class="ruta-dot verde"></div>
-      <div class="ruta-header">
-        <span class="ruta-nombre">Camino de Copina</span>
-        <span class="ruta-km">18 km loop</span>
-        <span class="ruta-dificultad dif-alta">Alta</span>
-      </div>
-      <p class="ruta-desc">
-        Loop desde Cuesta Blanca. La "Isla de Man cordobesa": 18 km de curvas continuas, algunas muy cerradas, con peraltes y banquinas vegetadas. Para pilotos experimentados. El río Copina al final con parador y puentes colgantes históricos. No confundir disfrute con competencia: no correr.
-      </p>
-      <div class="ruta-tags">
-        <span class="tag">Solo pilotos experimentados</span>
-        <span class="tag">Puentes Colgantes</span>
-        <span class="tag">Parador río Copina</span>
-        <span class="tag">Asfalto irregular</span>
-      </div>
-      <div class="ruta-escena">
-        <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star"></div>
-      </div>
-    </div>
+  <!-- RUTAS SERRANAS -->
+  <section>
+    <div class="section-label">El corazón del viaje</div>
+    <h2>Las rutas</h2>
 
-    <div class="ruta-item">
-      <div class="ruta-dot polvo"></div>
-      <div class="ruta-header">
-        <span class="ruta-nombre">Calamuchita (RP5)</span>
-        <span class="ruta-km">~82 km</span>
-        <span class="ruta-dificultad dif-media">Media</span>
-      </div>
-      <p class="ruta-desc">
-        Villa General Belgrano → Embalse Río Tercero. Recorre todo el valle de Calamuchita con curvas de montaña y paradas en Santa Rosa. Escénico nivel 5. Ideal para el último día antes de encarar la vuelta a CABA.
-      </p>
-      <div class="ruta-tags">
-        <span class="tag">V. Gral. Belgrano</span>
-        <span class="tag">Santa Rosa</span>
-        <span class="tag">Embalse</span>
-        <span class="tag">Curvas de montaña</span>
-      </div>
-      <div class="ruta-escena">
-        <div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div><div class="star on"></div>
-      </div>
-    </div>
+    <div class="roadmap">
 
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- TABLA COMPARATIVA -->
-<section>
-  <div class="section-label">De un vistazo</div>
-  <h2>Comparativa</h2>
-
-  <div class="tabla-wrap">
-    <table>
-      <thead>
-        <tr>
-          <th>Ruta</th>
-          <th>Km</th>
-          <th>Tiempo</th>
-          <th>Dificultad</th>
-          <th>Escénico</th>
-          <th>Carga enero</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Altas Cumbres</td>
-          <td>104</td>
-          <td>2–2.5 h</td>
-          <td><span class="etapa-badge badge-naranja">Alta</span></td>
-          <td>
-            <div class="barra-wrap">
-              <div class="barra" style="width: 60px"></div>
-              <span style="font-size:11px;color:var(--texto-muted)">5/5</span>
-            </div>
-          </td>
-          <td style="font-size:11px;color:var(--texto-muted)">Tormentas vespertinas</td>
-        </tr>
-        <tr>
-          <td>Túneles de Taninga</td>
-          <td>60</td>
-          <td>1.5 h</td>
-          <td><span class="etapa-badge badge-polvo">Media</span></td>
-          <td>
-            <div class="barra-wrap">
-              <div class="barra" style="width: 48px"></div>
-              <span style="font-size:11px;color:var(--texto-muted)">4/5</span>
-            </div>
-          </td>
-          <td style="font-size:11px;color:var(--texto-muted)">Fresco en altura</td>
-        </tr>
-        <tr>
-          <td>Camino del Cuadrado</td>
-          <td>30</td>
-          <td>0.5 h</td>
-          <td><span class="etapa-badge badge-verde">Baja</span></td>
-          <td>
-            <div class="barra-wrap">
-              <div class="barra" style="width: 48px"></div>
-              <span style="font-size:11px;color:var(--texto-muted)">4/5</span>
-            </div>
-          </td>
-          <td style="font-size:11px;color:var(--texto-muted)">Concurrido fines de semana</td>
-        </tr>
-        <tr>
-          <td>Ríos y Pinares</td>
-          <td>90</td>
-          <td>2 h</td>
-          <td><span class="etapa-badge badge-polvo">Media</span></td>
-          <td>
-            <div class="barra-wrap">
-              <div class="barra" style="width: 48px"></div>
-              <span style="font-size:11px;color:var(--texto-muted)">4/5</span>
-            </div>
-          </td>
-          <td style="font-size:11px;color:var(--texto-muted)">Ideal mañana temprano</td>
-        </tr>
-        <tr>
-          <td>Camino de Copina</td>
-          <td>18</td>
-          <td>0.5 h</td>
-          <td><span class="etapa-badge badge-naranja">Alta</span></td>
-          <td>
-            <div class="barra-wrap">
-              <div class="barra" style="width: 48px"></div>
-              <span style="font-size:11px;color:var(--texto-muted)">4/5</span>
-            </div>
-          </td>
-          <td style="font-size:11px;color:var(--texto-muted)">Solo expertos</td>
-        </tr>
-        <tr>
-          <td>Calamuchita RP5</td>
-          <td>82</td>
-          <td>1.5 h</td>
-          <td><span class="etapa-badge badge-polvo">Media</span></td>
-          <td>
-            <div class="barra-wrap">
-              <div class="barra" style="width: 60px"></div>
-              <span style="font-size:11px;color:var(--texto-muted)">5/5</span>
-            </div>
-          </td>
-          <td style="font-size:11px;color:var(--texto-muted)">Tardes tranquilas</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<hr class="divider">
-
-<!-- ITINERARIOS -->
-<section>
-  <div class="section-label">Días en la sierra</div>
-  <h2>Itinerarios</h2>
-
-  <div class="itinerario-tabs">
-    <button class="tab-btn" onclick="switchTab(event, 'it2')">2 días</button>
-    <button class="tab-btn active" onclick="switchTab(event, 'it3')">3 días</button>
-  </div>
-
-  <!-- 2 DÍAS -->
-  <div class="itinerario" id="it2">
-    <div class="dia">
-      <div class="dia-header">
-        <div class="dia-num">D1</div>
-        <div>
-          <div class="dia-titulo">Carlos Paz → Calamuchita</div>
-          <div style="font-size:11px;color:var(--texto-muted);margin-top:2px">Cuadrado + Ríos y Pinares</div>
+      <div class="ruta-item">
+        <div class="ruta-dot"></div>
+        <div class="ruta-header">
+          <span class="ruta-nombre">Altas Cumbres</span>
+          <span class="ruta-km">104 km</span>
+          <span class="ruta-dificultad dif-alta">Alta</span>
         </div>
-        <div class="dia-km">~160 km</div>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">07:00</span>
-        <span class="parada-txt"><strong>Desayuno en Carlos Paz.</strong> Cargar nafta. Verificar pronóstico del día.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">08:00</span>
-        <span class="parada-txt"><strong>Camino del Cuadrado</strong> hacia La Falda. 30 km de asfalto impecable para entrar en calor.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">09:30</span>
-        <span class="parada-txt"><strong>Café en Aeroclub La Cumbre.</strong> Parada con vista panorámica desde el aeroclub.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">11:00</span>
-        <span class="parada-txt"><strong>Ruta Ríos y Pinares:</strong> Falda del Carmen → Bosque Alegre → Potrero de Garay.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">13:30</span>
-        <span class="parada-txt"><strong>Almuerzo en Almacén de Potrerillo.</strong> Pausa obligatoria: buena cocina, fresco de río, descanso.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">15:30</span>
-        <span class="parada-txt"><strong>Llegar a Villa General Belgrano.</strong> Check-in. Cerveza artesanal local bien merecida.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">16–17 hs</span>
-        <span class="parada-txt" style="color:var(--naranja-light)">⚡ Franja de tormenta típica en enero. Quedarse en alojamiento.</span>
-      </div>
-    </div>
-
-    <div class="dia">
-      <div class="dia-header">
-        <div class="dia-num">D2</div>
-        <div>
-          <div class="dia-titulo">Calamuchita → regreso base</div>
-          <div style="font-size:11px;color:var(--texto-muted);margin-top:2px">RP5 + Embalse + Carlos Paz</div>
+        <p class="ruta-desc">
+          RP34 de Falda del Cañete a Mina Clavero. La más emblemática de Córdoba. Curvas amplias que invitan a disfrutar
+          del manejo, vistas de cóndores y niebla serrana. Sin estaciones de servicio en el tramo: salir con tanque
+          lleno. En enero: temperatura ideal arriba (~22 °C), cuidado con tormentas rápidas.
+        </p>
+        <div class="ruta-tags">
+          <span class="tag">Parador El Águila</span>
+          <span class="tag">PN Quebrada del Condorito</span>
+          <span class="tag">Mina Clavero (alojamiento)</span>
+          <span class="tag">Sin estaciones intermedias</span>
         </div>
-        <div class="dia-km">~140 km</div>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">08:00</span>
-        <span class="parada-txt"><strong>Ruta RP5 Belgrano → Embalse.</strong> 82 km con curvas de montaña nivel 5 escénico.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">10:30</span>
-        <span class="parada-txt"><strong>Embalse Río Tercero.</strong> Parada en la costanera, nafta, café.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">12:00</span>
-        <span class="parada-txt"><strong>Almuerzo en Santa Rosa de Calamuchita.</strong> Antes de subir.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">14:00</span>
-        <span class="parada-txt"><strong>Regreso a Carlos Paz</strong> por ruta alternativa (RP5 subida). Tarde libre.</span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 3 DÍAS -->
-  <div class="itinerario active" id="it3">
-    <div class="dia">
-      <div class="dia-header">
-        <div class="dia-num">D1</div>
-        <div>
-          <div class="dia-titulo">Altas Cumbres</div>
-          <div style="font-size:11px;color:var(--texto-muted);margin-top:2px">Carlos Paz → Mina Clavero</div>
+        <div class="ruta-escena">
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
         </div>
-        <div class="dia-km">~180 km</div>
       </div>
-      <div class="parada">
-        <span class="parada-hora">07:00</span>
-        <span class="parada-txt"><strong>Salida temprana.</strong> Tanque lleno en Carlos Paz. No hay estaciones en la cumbres.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">08:30</span>
-        <span class="parada-txt"><strong>RP34 Altas Cumbres.</strong> 104 km al tope de las sierras. Parada en Parador El Águila (café con vistas).</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">10:30</span>
-        <span class="parada-txt"><strong>Mirador del Cóndor.</strong> Parada en el Parque Nacional Quebrada del Condorito.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">12:00</span>
-        <span class="parada-txt"><strong>Llegada a Mina Clavero.</strong> Alojamiento, almuerzo. Tarde tranquila en el río.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">16–18 hs</span>
-        <span class="parada-txt" style="color:var(--naranja-light)">⚡ Tormenta vespertina probable. Río y descanso.</span>
-      </div>
-    </div>
 
-    <div class="dia">
-      <div class="dia-header">
-        <div class="dia-num">D2</div>
-        <div>
-          <div class="dia-titulo">Túneles de Taninga</div>
-          <div style="font-size:11px;color:var(--texto-muted);margin-top:2px">Mina Clavero → Taninga loop</div>
+      <div class="ruta-item">
+        <div class="ruta-dot verde"></div>
+        <div class="ruta-header">
+          <span class="ruta-nombre">Túneles de Taninga</span>
+          <span class="ruta-km">~60 km</span>
+          <span class="ruta-dificultad dif-media">Media</span>
         </div>
-        <div class="dia-km">~200 km</div>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">08:00</span>
-        <span class="parada-txt"><strong>Mina Clavero → Taninga</strong> por RP28. Acceso a los Túneles de la Sierra de Pocho.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">10:00</span>
-        <span class="parada-txt"><strong>5 túneles de la RP28.</strong> El tramo más sorprendente del viaje. Sin camiones, puro disfrute.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">11:30</span>
-        <span class="parada-txt"><strong>Parada en Cura Brochero.</strong> Almuerzo y visita al pueblo.</span>
-      </div>
-      <div class="parada">
-        <span class="parada-hora">14:00</span>
-        <span class="parada-txt"><strong>Regreso a Mina Clavero por ruta alternativa (Traslasierra). Segunda noche.</strong></span>
-      </div>
-    </div>
-
-    <div class="dia">
-      <div class="dia-header">
-        <div class="dia-num">D3</div>
-        <div>
-          <div class="dia-titulo">Copina + Calamuchita + regreso</div>
-          <div style="font-size:11px;color:var(--texto-muted);margin-top:2px">Mina → Copina → Belgrano → Carlos Paz</div>
+        <p class="ruta-desc">
+          RP28 Taninga → Chancaní. 5 túneles en la Sierra de Pocho, asfaltada en 2019. Paisaje volcánico de palmeras
+          Caranday, sin camiones. Una de las rutas más escénicas y sorprendentes. En el trayecto se cruzan los puentes
+          colgantes históricos. Se puede enlazar con Altas Cumbres para un loop completo.
+        </p>
+        <div class="ruta-tags">
+          <span class="tag">5 túneles serranos</span>
+          <span class="tag">Volcanes de Pocho</span>
+          <span class="tag">Chancaní (Reserva)</span>
+          <span class="tag">Sin tráfico pesado</span>
         </div>
-        <div class="dia-km">~220 km</div>
+        <div class="ruta-escena">
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star"></div>
+        </div>
       </div>
-      <div class="parada">
-        <span class="parada-hora">07:30</span>
-        <span class="parada-txt"><strong>Mina Clavero → Cuesta Blanca</strong> para entrar al loop de Copina (solo los experimentados del grupo).</span>
+
+      <div class="ruta-item">
+        <div class="ruta-dot polvo"></div>
+        <div class="ruta-header">
+          <span class="ruta-nombre">Camino del Cuadrado</span>
+          <span class="ruta-km">30 km</span>
+          <span class="ruta-dificultad dif-baja">Baja</span>
+        </div>
+        <p class="ruta-desc">
+          Carlos Paz → Valle Hermoso / La Falda. Asfalto impecable, curvas amplias, prohibido para camiones. Ideal para
+          el primer día cuando todavía se tiene el cuerpo fresco de ruta. Termina con café en el Aeroclub de La Cumbre
+          con vista panorámica.
+        </p>
+        <div class="ruta-tags">
+          <span class="tag">Aeroclub La Cumbre (café)</span>
+          <span class="tag">Sin camiones</span>
+          <span class="tag">Asfalto nuevo</span>
+          <span class="tag">Fines de semana: concurrido</span>
+        </div>
+        <div class="ruta-escena">
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star"></div>
+        </div>
       </div>
-      <div class="parada">
-        <span class="parada-hora">09:00</span>
-        <span class="parada-txt"><strong>Camino de Copina.</strong> 18 km de curvas técnicas. Parada en el parador del río.</span>
+
+      <div class="ruta-item">
+        <div class="ruta-dot"></div>
+        <div class="ruta-header">
+          <span class="ruta-nombre">Ríos y Pinares</span>
+          <span class="ruta-km">80–100 km</span>
+          <span class="ruta-dificultad dif-media">Media</span>
+        </div>
+        <p class="ruta-desc">
+          Falda del Carmen → Los Reartes por el valle Paravachasca. Subida empinada inicial con vistas al Observatorio
+          Bosque Alegre, luego curvas suaves entre ríos y pinos hasta Villa General Belgrano. Asfalto en muy buen
+          estado. Almuerzo obligatorio en el Almacén de Potrerillo.
+        </p>
+        <div class="ruta-tags">
+          <span class="tag">Observatorio Bosque Alegre</span>
+          <span class="tag">Potrero de Garay</span>
+          <span class="tag">Almacén Potrerillo</span>
+          <span class="tag">Río Los Reartes</span>
+        </div>
+        <div class="ruta-escena">
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star"></div>
+        </div>
       </div>
-      <div class="parada">
-        <span class="parada-hora">11:00</span>
-        <span class="parada-txt"><strong>Bosque Alegre → Falda del Carmen.</strong> Observatorio astronómico con vistas a Córdoba.</span>
+
+      <div class="ruta-item">
+        <div class="ruta-dot verde"></div>
+        <div class="ruta-header">
+          <span class="ruta-nombre">Camino de Copina</span>
+          <span class="ruta-km">18 km loop</span>
+          <span class="ruta-dificultad dif-alta">Alta</span>
+        </div>
+        <p class="ruta-desc">
+          Loop desde Cuesta Blanca. La "Isla de Man cordobesa": 18 km de curvas continuas, algunas muy cerradas, con
+          peraltes y banquinas vegetadas. Para pilotos experimentados. El río Copina al final con parador y puentes
+          colgantes históricos. No confundir disfrute con competencia: no correr.
+        </p>
+        <div class="ruta-tags">
+          <span class="tag">Solo pilotos experimentados</span>
+          <span class="tag">Puentes Colgantes</span>
+          <span class="tag">Parador río Copina</span>
+          <span class="tag">Asfalto irregular</span>
+        </div>
+        <div class="ruta-escena">
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star"></div>
+        </div>
       </div>
-      <div class="parada">
-        <span class="parada-hora">13:00</span>
-        <span class="parada-txt"><strong>Almuerzo en V. Gral. Belgrano.</strong> Última parada antes de retornar.</span>
+
+      <div class="ruta-item">
+        <div class="ruta-dot polvo"></div>
+        <div class="ruta-header">
+          <span class="ruta-nombre">Calamuchita (RP5)</span>
+          <span class="ruta-km">~82 km</span>
+          <span class="ruta-dificultad dif-media">Media</span>
+        </div>
+        <p class="ruta-desc">
+          Villa General Belgrano → Embalse Río Tercero. Recorre todo el valle de Calamuchita con curvas de montaña y
+          paradas en Santa Rosa. Escénico nivel 5. Ideal para el último día antes de encarar la vuelta a CABA.
+        </p>
+        <div class="ruta-tags">
+          <span class="tag">V. Gral. Belgrano</span>
+          <span class="tag">Santa Rosa</span>
+          <span class="tag">Embalse</span>
+          <span class="tag">Curvas de montaña</span>
+        </div>
+        <div class="ruta-escena">
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+          <div class="star on"></div>
+        </div>
       </div>
-      <div class="parada">
-        <span class="parada-hora">15:00</span>
-        <span class="parada-txt"><strong>Regreso a Carlos Paz.</strong> Check-out. Preparar moto para el tramo de vuelta a CABA.</span>
+
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- TABLA COMPARATIVA -->
+  <section>
+    <div class="section-label">De un vistazo</div>
+    <h2>Comparativa</h2>
+
+    <div class="tabla-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Ruta</th>
+            <th>Km</th>
+            <th>Tiempo</th>
+            <th>Dificultad</th>
+            <th>Escénico</th>
+            <th>Carga enero</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Altas Cumbres</td>
+            <td>104</td>
+            <td>2–2.5 h</td>
+            <td><span class="etapa-badge badge-naranja">Alta</span></td>
+            <td>
+              <div class="barra-wrap">
+                <div class="barra" style="width: 60px"></div>
+                <span style="font-size:11px;color:var(--texto-muted)">5/5</span>
+              </div>
+            </td>
+            <td style="font-size:11px;color:var(--texto-muted)">Tormentas vespertinas</td>
+          </tr>
+          <tr>
+            <td>Túneles de Taninga</td>
+            <td>60</td>
+            <td>1.5 h</td>
+            <td><span class="etapa-badge badge-polvo">Media</span></td>
+            <td>
+              <div class="barra-wrap">
+                <div class="barra" style="width: 48px"></div>
+                <span style="font-size:11px;color:var(--texto-muted)">4/5</span>
+              </div>
+            </td>
+            <td style="font-size:11px;color:var(--texto-muted)">Fresco en altura</td>
+          </tr>
+          <tr>
+            <td>Camino del Cuadrado</td>
+            <td>30</td>
+            <td>0.5 h</td>
+            <td><span class="etapa-badge badge-verde">Baja</span></td>
+            <td>
+              <div class="barra-wrap">
+                <div class="barra" style="width: 48px"></div>
+                <span style="font-size:11px;color:var(--texto-muted)">4/5</span>
+              </div>
+            </td>
+            <td style="font-size:11px;color:var(--texto-muted)">Concurrido fines de semana</td>
+          </tr>
+          <tr>
+            <td>Ríos y Pinares</td>
+            <td>90</td>
+            <td>2 h</td>
+            <td><span class="etapa-badge badge-polvo">Media</span></td>
+            <td>
+              <div class="barra-wrap">
+                <div class="barra" style="width: 48px"></div>
+                <span style="font-size:11px;color:var(--texto-muted)">4/5</span>
+              </div>
+            </td>
+            <td style="font-size:11px;color:var(--texto-muted)">Ideal mañana temprano</td>
+          </tr>
+          <tr>
+            <td>Camino de Copina</td>
+            <td>18</td>
+            <td>0.5 h</td>
+            <td><span class="etapa-badge badge-naranja">Alta</span></td>
+            <td>
+              <div class="barra-wrap">
+                <div class="barra" style="width: 48px"></div>
+                <span style="font-size:11px;color:var(--texto-muted)">4/5</span>
+              </div>
+            </td>
+            <td style="font-size:11px;color:var(--texto-muted)">Solo expertos</td>
+          </tr>
+          <tr>
+            <td>Calamuchita RP5</td>
+            <td>82</td>
+            <td>1.5 h</td>
+            <td><span class="etapa-badge badge-polvo">Media</span></td>
+            <td>
+              <div class="barra-wrap">
+                <div class="barra" style="width: 60px"></div>
+                <span style="font-size:11px;color:var(--texto-muted)">5/5</span>
+              </div>
+            </td>
+            <td style="font-size:11px;color:var(--texto-muted)">Tardes tranquilas</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ITINERARIOS -->
+  <section>
+    <div class="section-label">Días en la sierra</div>
+    <h2>Itinerarios</h2>
+
+    <div class="itinerario-tabs">
+      <button class="tab-btn" onclick="switchTab(event, 'it2')">2 días</button>
+      <button class="tab-btn active" onclick="switchTab(event, 'it3')">3 días</button>
+    </div>
+
+    <!-- 2 DÍAS -->
+    <div class="itinerario" id="it2">
+      <div class="dia">
+        <div class="dia-header">
+          <div class="dia-num">D1</div>
+          <div>
+            <div class="dia-titulo">Carlos Paz → Calamuchita</div>
+            <div style="font-size:11px;color:var(--texto-muted);margin-top:2px">Cuadrado + Ríos y Pinares</div>
+          </div>
+          <div class="dia-km">~160 km</div>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">07:00</span>
+          <span class="parada-txt"><strong>Desayuno en Carlos Paz.</strong> Cargar nafta. Verificar pronóstico del
+            día.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">08:00</span>
+          <span class="parada-txt"><strong>Camino del Cuadrado</strong> hacia La Falda. 30 km de asfalto impecable para
+            entrar en calor.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">09:30</span>
+          <span class="parada-txt"><strong>Café en Aeroclub La Cumbre.</strong> Parada con vista panorámica desde el
+            aeroclub.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">11:00</span>
+          <span class="parada-txt"><strong>Ruta Ríos y Pinares:</strong> Falda del Carmen → Bosque Alegre → Potrero de
+            Garay.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">13:30</span>
+          <span class="parada-txt"><strong>Almuerzo en Almacén de Potrerillo.</strong> Pausa obligatoria: buena cocina,
+            fresco de río, descanso.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">15:30</span>
+          <span class="parada-txt"><strong>Llegar a Villa General Belgrano.</strong> Check-in. Cerveza artesanal local
+            bien merecida.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">16–17 hs</span>
+          <span class="parada-txt" style="color:var(--naranja-light)">⚡ Franja de tormenta típica en enero. Quedarse en
+            alojamiento.</span>
+        </div>
+      </div>
+
+      <div class="dia">
+        <div class="dia-header">
+          <div class="dia-num">D2</div>
+          <div>
+            <div class="dia-titulo">Calamuchita → regreso base</div>
+            <div style="font-size:11px;color:var(--texto-muted);margin-top:2px">RP5 + Embalse + Carlos Paz</div>
+          </div>
+          <div class="dia-km">~140 km</div>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">08:00</span>
+          <span class="parada-txt"><strong>Ruta RP5 Belgrano → Embalse.</strong> 82 km con curvas de montaña nivel 5
+            escénico.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">10:30</span>
+          <span class="parada-txt"><strong>Embalse Río Tercero.</strong> Parada en la costanera, nafta, café.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">12:00</span>
+          <span class="parada-txt"><strong>Almuerzo en Santa Rosa de Calamuchita.</strong> Antes de subir.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">14:00</span>
+          <span class="parada-txt"><strong>Regreso a Carlos Paz</strong> por ruta alternativa (RP5 subida). Tarde
+            libre.</span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<hr class="divider">
+    <!-- 3 DÍAS -->
+    <div class="itinerario active" id="it3">
+      <div class="dia">
+        <div class="dia-header">
+          <div class="dia-num">D1</div>
+          <div>
+            <div class="dia-titulo">Altas Cumbres</div>
+            <div style="font-size:11px;color:var(--texto-muted);margin-top:2px">Carlos Paz → Mina Clavero</div>
+          </div>
+          <div class="dia-km">~180 km</div>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">07:00</span>
+          <span class="parada-txt"><strong>Salida temprana.</strong> Tanque lleno en Carlos Paz. No hay estaciones en la
+            cumbres.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">08:30</span>
+          <span class="parada-txt"><strong>RP34 Altas Cumbres.</strong> 104 km al tope de las sierras. Parada en Parador
+            El Águila (café con vistas).</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">10:30</span>
+          <span class="parada-txt"><strong>Mirador del Cóndor.</strong> Parada en el Parque Nacional Quebrada del
+            Condorito.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">12:00</span>
+          <span class="parada-txt"><strong>Llegada a Mina Clavero.</strong> Alojamiento, almuerzo. Tarde tranquila en el
+            río.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">16–18 hs</span>
+          <span class="parada-txt" style="color:var(--naranja-light)">⚡ Tormenta vespertina probable. Río y
+            descanso.</span>
+        </div>
+      </div>
 
-<!-- TIPS ENERO -->
-<section>
-  <div class="section-label">Clima & seguridad</div>
-  <h2>Enero en la sierra</h2>
+      <div class="dia">
+        <div class="dia-header">
+          <div class="dia-num">D2</div>
+          <div>
+            <div class="dia-titulo">Túneles de Taninga</div>
+            <div style="font-size:11px;color:var(--texto-muted);margin-top:2px">Mina Clavero → Taninga loop</div>
+          </div>
+          <div class="dia-km">~200 km</div>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">08:00</span>
+          <span class="parada-txt"><strong>Mina Clavero → Taninga</strong> por RP28. Acceso a los Túneles de la Sierra
+            de Pocho.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">10:00</span>
+          <span class="parada-txt"><strong>5 túneles de la RP28.</strong> El tramo más sorprendente del viaje. Sin
+            camiones, puro disfrute.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">11:30</span>
+          <span class="parada-txt"><strong>Parada en Cura Brochero.</strong> Almuerzo y visita al pueblo.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">14:00</span>
+          <span class="parada-txt"><strong>Regreso a Mina Clavero por ruta alternativa (Traslasierra). Segunda
+              noche.</strong></span>
+        </div>
+      </div>
 
-  <div class="tips-grid">
-    <div class="tip-card">
-      <span class="tip-icon">🌡️</span>
-      <div class="tip-titulo">Calor en la llanura</div>
-      <p class="tip-txt">Entre Rosario y Carlos Paz, esperar 36–40 °C en la franja 12–16 hs. Usar ropa técnica ventilada. Parar en estaciones con aire acondicionado durante el pico.</p>
+      <div class="dia">
+        <div class="dia-header">
+          <div class="dia-num">D3</div>
+          <div>
+            <div class="dia-titulo">Copina + Calamuchita + regreso</div>
+            <div style="font-size:11px;color:var(--texto-muted);margin-top:2px">Mina → Copina → Belgrano → Carlos Paz
+            </div>
+          </div>
+          <div class="dia-km">~220 km</div>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">07:30</span>
+          <span class="parada-txt"><strong>Mina Clavero → Cuesta Blanca</strong> para entrar al loop de Copina (solo los
+            experimentados del grupo).</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">09:00</span>
+          <span class="parada-txt"><strong>Camino de Copina.</strong> 18 km de curvas técnicas. Parada en el parador del
+            río.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">11:00</span>
+          <span class="parada-txt"><strong>Bosque Alegre → Falda del Carmen.</strong> Observatorio astronómico con
+            vistas a Córdoba.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">13:00</span>
+          <span class="parada-txt"><strong>Almuerzo en V. Gral. Belgrano.</strong> Última parada antes de
+            retornar.</span>
+        </div>
+        <div class="parada">
+          <span class="parada-hora">15:00</span>
+          <span class="parada-txt"><strong>Regreso a Carlos Paz.</strong> Check-out. Preparar moto para el tramo de
+            vuelta a CABA.</span>
+        </div>
+      </div>
     </div>
-    <div class="tip-card">
-      <span class="tip-icon">⛈️</span>
-      <div class="tip-titulo">Tormentas vespertinas</div>
-      <p class="tip-txt">En enero, las tormentas de verano son habituales de 16 a 20 hs. Planificar llegar al alojamiento antes de ese rango. Si llueve en las cumbres, postergar la salida.</p>
-    </div>
-    <div class="tip-card">
-      <span class="tip-icon">🌫️</span>
-      <div class="tip-titulo">Niebla en Altas Cumbres</div>
-      <p class="tip-txt">Las nieblas matinales en la cumbre son frecuentes. Salir temprano y si el camino tiene visibilidad menor a 50 m, bajar velocidad drásticamente o esperar.</p>
-    </div>
-    <div class="tip-card">
-      <span class="tip-icon">💧</span>
-      <div class="tip-titulo">Hidratación</div>
-      <p class="tip-txt">Mínimo 2 L de agua por persona en el baúl. El calor de la llanura y el traje deshidratan rápido. Aprovechar cada parada para beber.</p>
-    </div>
-    <div class="tip-card">
-      <span class="tip-icon">⛽</span>
-      <div class="tip-titulo">Combustible</div>
-      <p class="tip-txt">Altas Cumbres no tiene estaciones en el tramo. Salir siempre con tanque lleno desde Carlos Paz o Mina Clavero. Llevar mapa de estaciones offline.</p>
-    </div>
-    <div class="tip-card">
-      <span class="tip-icon">📡</span>
-      <div class="tip-titulo">Señal y GPS</div>
-      <p class="tip-txt">En las cumbres la señal es intermitente. Cargar mapas offline antes de salir (Maps.me, OsmAnd). Establecer punto de encuentro en caso de separarse.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<hr class="divider">
+  <hr class="divider">
 
-<!-- CHECKLIST DE EQUIPO -->
-<section>
-  <div class="section-label">Antes de salir</div>
-  <h2>Equipo & checklist</h2>
+  <!-- TIPS ENERO -->
+  <section>
+    <div class="section-label">Clima & seguridad</div>
+    <h2>Enero en la sierra</h2>
 
-  <div class="equipo-grid">
-    <div class="equipo-cat">
-      <div class="equipo-cat-titulo">🏍️ Moto</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Frenos revisados</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Presión y dibujo de neumáticos</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Cadena lubricada y tensión ok</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Nivel de aceite</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Luces delanteras y traseras</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Batería en buen estado</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Control mecánico previo</div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <span class="tip-icon">🌡️</span>
+        <div class="tip-titulo">Calor en la llanura</div>
+        <p class="tip-txt">Entre Rosario y Carlos Paz, esperar 36–40 °C en la franja 12–16 hs. Usar ropa técnica
+          ventilada. Parar en estaciones con aire acondicionado durante el pico.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">⛈️</span>
+        <div class="tip-titulo">Tormentas vespertinas</div>
+        <p class="tip-txt">En enero, las tormentas de verano son habituales de 16 a 20 hs. Planificar llegar al
+          alojamiento antes de ese rango. Si llueve en las cumbres, postergar la salida.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">🌫️</span>
+        <div class="tip-titulo">Niebla en Altas Cumbres</div>
+        <p class="tip-txt">Las nieblas matinales en la cumbre son frecuentes. Salir temprano y si el camino tiene
+          visibilidad menor a 50 m, bajar velocidad drásticamente o esperar.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">💧</span>
+        <div class="tip-titulo">Hidratación</div>
+        <p class="tip-txt">Mínimo 2 L de agua por persona en el baúl. El calor de la llanura y el traje deshidratan
+          rápido. Aprovechar cada parada para beber.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">⛽</span>
+        <div class="tip-titulo">Combustible</div>
+        <p class="tip-txt">Altas Cumbres no tiene estaciones en el tramo. Salir siempre con tanque lleno desde Carlos
+          Paz o Mina Clavero. Llevar mapa de estaciones offline.</p>
+      </div>
+      <div class="tip-card">
+        <span class="tip-icon">📡</span>
+        <div class="tip-titulo">Señal y GPS</div>
+        <p class="tip-txt">En las cumbres la señal es intermitente. Cargar mapas offline antes de salir (Maps.me,
+          OsmAnd). Establecer punto de encuentro en caso de separarse.</p>
+      </div>
     </div>
-    <div class="equipo-cat">
-      <div class="equipo-cat-titulo">🧍 Piloto</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Casco integral homologado</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Chaqueta técnica ventilada</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Pantalón de protección</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Guantes resistentes</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Botas altas</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Lluvia: cubrebotas + capa</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Buff / cuello para el calor</div>
-    </div>
-    <div class="equipo-cat">
-      <div class="equipo-cat-titulo">🎒 Equipaje</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>DNI + licencia + cédula verde</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Kit de primeros auxilios</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Herramientas básicas</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Bujías + fusibles de repuesto</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Cable de arranque</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>2 L de agua mínimo</div>
-      <div class="equipo-item"><div class="chk" onclick="toggleChk(this)"></div>Cargador USB + powerbank</div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="big">BUEN VIAJE</div>
-  <p>Córdoba · Enero 2026 · 4 motociclistas · 1 ruta</p>
-</footer>
+  <hr class="divider">
 
-<script src="./js/main.js"></script>
+  <!-- CHECKLIST DE EQUIPO -->
+  <section>
+    <div class="section-label">Antes de salir</div>
+    <h2>Equipo & checklist</h2>
+
+    <div class="equipo-grid">
+      <div class="equipo-cat">
+        <div class="equipo-cat-titulo">🏍️ Moto</div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Frenos revisados
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Presión y dibujo de neumáticos
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Cadena lubricada y tensión ok
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Nivel de aceite
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Luces delanteras y traseras
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Batería en buen estado
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Control mecánico previo
+        </div>
+      </div>
+      <div class="equipo-cat">
+        <div class="equipo-cat-titulo">🧍 Piloto</div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Casco integral homologado
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Chaqueta técnica ventilada
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Pantalón de protección
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Guantes resistentes
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Botas altas
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Lluvia: cubrebotas + capa
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Buff / cuello para el calor
+        </div>
+      </div>
+      <div class="equipo-cat">
+        <div class="equipo-cat-titulo">🎒 Equipaje</div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>DNI + licencia + cédula verde
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Kit de primeros auxilios
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Herramientas básicas
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Bujías + fusibles de repuesto
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Cable de arranque
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>2 L de agua mínimo
+        </div>
+        <div class="equipo-item">
+          <div class="chk" onclick="toggleChk(this)"></div>Cargador USB + powerbank
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="big">BUEN VIAJE</div>
+    <p>Córdoba · Enero 2026 · 4 motociclistas · 1 ruta</p>
+  </footer>
+
+  <script src="./js/main.js"></script>
 
 </body>
+
 </html>
